@@ -7,8 +7,6 @@ redirect_from:
   - /about.html
 ---
 
-# About Me
-
 I am Yonghyeon Jeon, a Postdoctoral Research Associate in the Department of Mathematical Sciences at UNIST in Ulsan, South Korea. My research interests span numerical analysis, fractional calculus, and machine learning.
 
 ## Research Interests

@@ -5,8 +5,16 @@ permalink: /teaching/
 author_profile: true
 ---
 
-{% include base_path %}
-
 {% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+  <div class="list__item">
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      <h2 class="archive__item-title" itemprop="headline">
+        <a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a>
+      </h2>
+      <p><strong>Period:</strong> {{ post.period }}</p>
+      {% if post.course %}<p><strong>Course:</strong> {{ post.course }}</p>{% endif %}
+      <p><strong>Role:</strong> {{ post.role }}</p>
+      <p><strong>Duties:</strong> {{ post.duties }}</p>
+    </article>
+  </div>
 {% endfor %}

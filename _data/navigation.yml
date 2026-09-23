@@ -1,5 +1,7 @@
 # Header navigation links. Add entries under main when their content is ready.
 main:
+  - title: "Research"
+    url: /research/
   - title: "Publications"
     url: /publications/
   - title: "Talks"

@@ -8,12 +8,17 @@
    sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
 
+{% assign color_theme = site.site_theme %}
+{% if site.site_theme == "dark" %}
+  {% assign color_theme = "default" %}
+{% endif %}
+
 @import
     "vendor/breakpoint/breakpoint",
 
     "themes",
-    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+    "theme/{{ color_theme | default: 'default' | append: '_light' }}",
+    "theme/{{ color_theme | default: 'default' | append: '_dark' }}",
 
     "include/mixins",
     "vendor/susy/susy",

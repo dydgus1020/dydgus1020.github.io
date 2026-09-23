@@ -1,2 +1,4 @@
 # Header navigation links. Add entries under main when their content is ready.
-main: []
+main:
+  - title: "Publications"
+    url: /publications/

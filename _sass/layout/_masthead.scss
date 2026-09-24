@@ -45,12 +45,61 @@
 }
 
 .masthead__menu {
+  display: flex;
+  align-items: center;
+
+  .greedy-nav {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
 
   ul {
     margin: 0;
     padding: 0;
     clear: both;
     list-style-type: none;
+  }
+}
+
+.masthead__menu > .masthead__utilities {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: clamp(0.75rem, 2.5vw, 2rem);
+
+  #language-toggle {
+    white-space: nowrap;
+
+    button {
+      padding: 0.5rem 0.2rem;
+      border: 0;
+      background: transparent;
+      color: var(--global-masthead-link-color);
+      font: inherit;
+      cursor: pointer;
+
+      &[aria-pressed="true"] {
+        color: var(--global-text-color);
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--global-text-color);
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  #theme-toggle a {
+    display: flex;
+    width: 25px;
+    justify-content: center;
+    padding: 0.5rem 0;
+    color: var(--global-masthead-link-color);
+    cursor: pointer;
   }
 }
 

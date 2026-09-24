@@ -307,6 +307,26 @@
     white-space: nowrap;
   }
 
+  li.author__meta-row {
+    white-space: normal;
+
+    @include breakpoint($large) {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    > i {
+      flex: 0 0 auto;
+      margin-top: 0.2em;
+    }
+
+    .author__meta-text {
+      min-width: 0;
+      overflow-wrap: break-word;
+      word-break: normal;
+    }
+  }
+
   a {
     display: block;
     margin-bottom: 5px;

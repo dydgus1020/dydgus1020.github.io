@@ -9,6 +9,18 @@ html {
   scroll-behavior: smooth;
 }
 
+[data-lang="ko"] {
+  display: none !important;
+}
+
+html[data-language="ko"] [data-lang="en"] {
+  display: none !important;
+}
+
+html[data-language="ko"] [data-lang="ko"] {
+  display: revert !important;
+}
+
 body {
   /* Set via _themes.scss */
   color: var(--global-text-color);
